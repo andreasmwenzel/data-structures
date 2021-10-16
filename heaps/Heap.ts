@@ -1,4 +1,4 @@
-abstract class Heap{
+export abstract class Heap{
   values: number[] = [];
   get size(): number {
     return this.values.length;
@@ -42,7 +42,7 @@ abstract class Heap{
   }
 }
 
-class MinHeap extends Heap{
+export class MinHeap extends Heap{
   protected heapifyUp(index: number) {
     if (index === 0) {
       return;
@@ -73,7 +73,7 @@ class MinHeap extends Heap{
   }
 }
 
-class MaxHeap extends Heap{
+export class MaxHeap extends Heap{
   protected heapifyUp(index: number) {
     if (index === 0) {
       return;
